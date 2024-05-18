@@ -1,0 +1,30 @@
+:root {
+    --anim-drop-appear: drop-appear 0.3s ease-in-out;
+
+    @keyframes drop-appear {
+        0% {
+            opacity: 0;
+            transform: translateY(-0.5rem);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    --anim-nav-appear: nav-appear 0.2s ease-in-out;
+
+    @keyframes nav-appear {
+        0% {
+            transform: translateX(-1rem);
+            opacity: 0;
+        }
+        33% {
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}

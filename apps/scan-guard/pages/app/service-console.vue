@@ -9,12 +9,7 @@
         <header class="service-console__header">
             <h1 class="service-console__header__title">Service Console</h1>
         </header>
-        <div v-if="requestsStore.isNmapInstalled">
-            <p>Nmap is installed</p>
-        </div>
-        <div v-else>
-            <p>Nmap is not installed</p>
-        </div>
+        <NmapStatusWidget />
     </div>
 </template>
 
@@ -25,6 +20,8 @@
         align-content: start;
         display: grid;
         row-gap: 1.5rem;
+
+        animation: var(--anim-drop-appear);
 
         &__header {
             &__title {
