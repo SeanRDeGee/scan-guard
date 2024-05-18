@@ -1,6 +1,15 @@
 :root {
-    --background-primary: #121517;
-    --background-secondary: #181a1c;
+    // General background colors
+    --clr-background-primary: hsl(204, 12%, 5%);
+    --clr-background-secondary: hsl(210, 8%, 7%);
 
-    --border-primary: #252526;
+    // General border colors
+    --clr-border-primary: hsl(240, 1%, 15%);
+
+    // General text colors
+    --clr-text-primary: hsl(180, 10%, 80%);
+    --clr-text-secondary: hsl(180, 5%, 65%);
+
+    // Menu item color
+    --clr-menu-item-background: hsl(210, 8%, 11%);
 }

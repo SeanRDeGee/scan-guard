@@ -16,6 +16,7 @@
         "typescript": "^5.0.0"
     },
     "dependencies": {
+        "@scan-guard/nmap-service": "workspace:*",
         "express": "^4.19.2",
         "socket.io": "^4.7.5"
     }
