@@ -5,6 +5,5 @@
     "singleQuote": true,
     "bracketSpacing": true,
     "arrowParens": "avoid",
-    "printWidth": 120,
-    "vueIndentScriptAndStyle": true
+    "printWidth": 120
 }
