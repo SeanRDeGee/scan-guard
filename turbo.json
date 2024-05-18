@@ -1,4 +1,14 @@
 {
     "$schema": "https://turbo.build/schema.json",
-    "pipeline": {}
+    "pipeline": {
+        "dev": {
+            "cache": false,
+            "persistent": true
+        },
+        "build": {
+            "outputs": [
+                ".nuxt/**"
+            ]
+        }
+    }
 }
