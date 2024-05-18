@@ -4,7 +4,8 @@
     "type": "module",
     "scripts": {
         "build": "nuxt build",
-        "dev": "nuxt dev"
+        "dev": "nuxt dev",
+        "deploy": "bun .output/server/index.mjs"
     },
     "dependencies": {
         "nuxt": "^3.11.2",

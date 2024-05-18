@@ -1,5 +1,5 @@
 {
   "prettier.requireConfig": true,
   "editor.formatOnSave": true,
-  "editor.detectIndentation": false
+  "editor.detectIndentation": true
 }

@@ -9,6 +9,11 @@
             "outputs": [
                 ".nuxt/**"
             ]
+        },
+        "deploy": {
+            "dependsOn": [
+                "build"
+            ]
         }
     }
 }
