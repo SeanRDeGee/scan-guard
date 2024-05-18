@@ -1,6 +1,6 @@
 <template>
     <nav class="app-navigation">
-        <img src="/images/scanguard-logo-full.svg" alt="Sintrex ScanGuard" class="app-navigation__logo" />
+        <svg-scanguard-logo-full class="app-navigation__logo" />
     </nav>
 </template>
 
