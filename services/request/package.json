@@ -1,0 +1,22 @@
+{
+  "name": "@scan-guard/request-service",
+  "version": "0.1.0",
+  "description": "Sintrex ScanGuard Request Service",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun index.ts",
+    "deploy": "bun index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^4.17.21"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}
