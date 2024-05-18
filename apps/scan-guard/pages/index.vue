@@ -1,3 +1,3 @@
 <template>
-    <div class="scanguard-page home"></div>
+    <div class="scanguard-page"></div>
 </template>
