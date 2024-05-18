@@ -1,0 +1,12 @@
+# Bun
+node_modules
+
+# Turbo
+.turbo
+
+# Build artifacts
+.nuxt
+.output
+
+# Environment variables
+.env
