@@ -1,2 +1,1 @@
-# scan-guard
-Sintrex Scan Guard
+# Sintrex ScanGuard
