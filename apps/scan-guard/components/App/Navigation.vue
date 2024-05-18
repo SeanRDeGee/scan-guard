@@ -1,14 +1,21 @@
 <template>
-    <nav class="app-navigation"></nav>
+    <nav class="app-navigation">
+        <img src="/images/scanguard-logo-full.svg" alt="Sintrex ScanGuard" class="app-navigation__logo" />
+    </nav>
 </template>
 
 <style lang="scss" scoped>
     .app-navigation {
-        padding: 1rem;
+        padding: 1.5rem;
 
         display: grid;
 
         background-color: var(--background-secondary);
         border-right: 1px solid var(--border-primary);
+
+        .app-navigation__logo {
+            height: auto;
+            width: 10rem;
+        }
     }
 </style>
