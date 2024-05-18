@@ -1,8 +1,8 @@
 {
-	// List of extensions which should be recommended for users of this workspace.
-	"recommendations": [
-		"esbenp.prettier-vscode",
-    "Vue.volar",
-    "eamodio.gitlens"
-	]
+    // List of extensions which should be recommended for users of this workspace.
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "Vue.volar",
+        "eamodio.gitlens"
+    ]
 }
