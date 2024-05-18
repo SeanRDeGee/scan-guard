@@ -1,20 +1,22 @@
 {
-    "name": "@scan-guard/app",
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "build": "nuxt build",
-        "dev": "nuxt dev",
-        "deploy": "bun .output/server/index.mjs"
-    },
-    "dependencies": {
-        "nuxt": "^3.11.2",
-        "socket.io-client": "^4.7.5",
-        "vue": "^3.4.27",
-        "vue-router": "^4.3.2"
-    },
-    "devDependencies": {
-        "nuxt-svgo": "^4.0.1",
-        "sass": "^1.77.2"
-    }
+  "name": "@scan-guard/app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "deploy": "bun .output/server/index.mjs"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
+    "nuxt": "^3.11.2",
+    "pinia": "^2.1.7",
+    "socket.io-client": "^4.7.5",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "nuxt-svgo": "^4.0.1",
+    "sass": "^1.77.2"
+  }
 }

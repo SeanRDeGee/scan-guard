@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
     ssr: false,
-    modules: ['nuxt-svgo'],
+    modules: ['@pinia/nuxt', 'nuxt-svgo'],
     app: {
         head: {
             viewport: 'width=device-width, initial-scale=1',
