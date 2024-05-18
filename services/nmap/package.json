@@ -1,0 +1,16 @@
+{
+    "name": "@scan-guard/nmap-service",
+    "version": "0.1.0",
+    "description": "Sintrex ScanGuard Nmap Service",
+    "module": "index.ts",
+    "type": "module",
+    "exports": {
+        ".": "./index.ts"
+    },
+    "devDependencies": {
+        "@types/bun": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    }
+}
