@@ -1,5 +1,3 @@
 <template>
-    <div class="app-home-page">
-        <h1>App Home</h1>
-    </div>
+    <div class="app-home"></div>
 </template>
