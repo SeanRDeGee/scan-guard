@@ -13,6 +13,7 @@
         "vue-router": "^4.3.2"
     },
     "devDependencies": {
+        "nuxt-svgo": "^4.0.1",
         "sass": "^1.77.2"
     }
 }
