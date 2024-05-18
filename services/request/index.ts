@@ -15,9 +15,7 @@ const io = new SocketServer(server, {
     },
 })
 
-io.on('connect', socket => {
-    console.log('New connection:', socket.id)
-})
+io.on('connect', socket => {})
 
 server.listen(port, () => {
     console.log(`🚀 ScanGuard Request Service started on port ${port}`)
