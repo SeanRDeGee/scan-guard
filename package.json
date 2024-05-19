@@ -1,14 +1,17 @@
 {
-    "name": "scan-guard",
-    "version": "0.1.0",
-    "author": "Sintrex Integration Services",
-    "description": "Sintrex ScanGuard",
-    "license": "MIT",
-    "dependencies": {
-        "turbo": "^1.13.3"
-    },
-    "workspaces": [
-        "apps/*",
-        "services/*"
-    ]
+  "name": "scan-guard",
+  "version": "0.1.0",
+  "author": "Sintrex Integration Services",
+  "description": "Sintrex ScanGuard",
+  "license": "MIT",
+  "dependencies": {
+    "turbo": "^1.13.3"
+  },
+  "workspaces": [
+    "apps/*",
+    "services/*"
+  ],
+  "devDependencies": {
+    "@types/uuid": "^9.0.8"
+  }
 }

@@ -8,13 +8,42 @@
     --clr-border-primary: hsl(240, 1%, 15%);
 
     // General text colors
+    --clr-text-white: hsl(0, 0%, 100%);
     --clr-text-primary: hsl(180, 10%, 80%);
     --clr-text-secondary: hsl(180, 5%, 65%);
+    --clr-text-tertiary: hsl(180, 5%, 45%);
 
     // Menu item color
     --clr-menu-item-background: hsl(210, 8%, 11%);
 
-    // Status colors
+    --clr-asterisk-00: #c53b3b;
+
+    // Input colors
+    --clr-input-background-00: hsl(210, 8%, 11%);
+    --clr-input-background-01: #14171a;
+    --clr-input-border-00: hsl(210, 8%, 14%);
+    --clr-input-border-01: hsl(210, 8%, 21%);
+
+    // Button colors
+    --clr-button-normal-background-00: #3f9b96;
+    --clr-button-normal-background-01: #197972;
+    --clr-button-normal-border-00: #65adab;
+    --clr-button-normal-border-01: #3f9b96;
+
+    --clr-button-outline-background-00: transparent;
+    --clr-button-outline-background-01: #1a1f1f;
+    --clr-button-outline-border-00: #2d3236;
+
+    --clr-button-mono-background-00: #1a1f1f;
+    --clr-button-mono-background-01: #262c2c;
+    --clr-button-mono-border-00: #2d3236;
+
+    --clr-button-disabled-background-00: transparent;
+    --clr-button-disabled-border-00: #1e2224;
+
+    --clr-checkbox-background-selected-00: #65adab;
+
+    // Status Colors
     --clr-status-red-00: #cf7b7b;
     --clr-status-red-type-00: #bd9494;
     --clr-status-red-border-00: #613e3e;

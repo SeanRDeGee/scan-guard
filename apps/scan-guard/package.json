@@ -9,11 +9,14 @@
   },
   "dependencies": {
     "@scan-guard/api": "workspace:*",
+    "@scan-guard/request-service": "workspace:*",
     "@pinia/nuxt": "^0.5.1",
     "axios": "^1.6.8",
+    "dexie": "^4.0.4",
     "nuxt": "^3.11.2",
     "pinia": "^2.1.7",
     "socket.io-client": "^4.7.5",
+    "uuid": "^9.0.1",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
   },

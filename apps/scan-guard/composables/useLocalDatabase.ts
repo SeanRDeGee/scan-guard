@@ -1,23 +1,32 @@
+import dexie from 'dexie'
+
+type GenericRequest = {
+    id: string
+    type: string
+    status: string
+    createdAt: number
+    completedAt: number | null
+    requestPayload: unknown | null
+    data: unknown | null
+    error: unknown | null
+}
+
 export default function useLocalDatabase() {
-    const openRequest = indexedDB.open('scan-guard', 1)
+    class Database extends dexie {
+        requests!: dexie.Table<GenericRequest>
 
-    const db = ref<IDBDatabase | null>(null)
+        constructor() {
+            super('scan-guard')
 
-    openRequest.onupgradeneeded = function () {
-        const db = openRequest.result
-        db.createObjectStore('requests', { keyPath: 'id' })
+            this.version(1).stores({
+                requests: 'id',
+            })
+        }
     }
 
-    openRequest.onsuccess = function () {
-        db.value = openRequest.result
-    }
-
-    const getRequestStore = function (): IDBObjectStore | null {
-        return db.value ? db.value.transaction('requests', 'readwrite').objectStore('requests') : null
-    }
+    const db = new Database()
 
     return {
         db,
-        getRequestStore,
     }
 }

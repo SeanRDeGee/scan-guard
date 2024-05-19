@@ -26,7 +26,16 @@ const version = async function (): Promise<string> {
     }
 }
 
+const scanSingleIP = async function (ip: string): Promise<string> {
+    try {
+        return await execute(`nmap ${ip}`)
+    } catch (error) {
+        throw new Error(`Failed to scan IP: ${error}`)
+    }
+}
+
 export default {
     isInstalled,
     version,
+    scanSingleIP,
 }

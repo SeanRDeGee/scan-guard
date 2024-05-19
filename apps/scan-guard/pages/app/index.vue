@@ -3,6 +3,9 @@
         <header class="app-home__header">
             <h1 class="app-home__header__title">ScanGuard Tools</h1>
         </header>
+        <div class="app-home__content">
+            <SingleIPRequestsWidget />
+        </div>
     </div>
 </template>
 
@@ -12,7 +15,6 @@
 
         align-content: start;
         display: grid;
-        row-gap: 1.5rem;
 
         animation: var(--anim-drop-appear);
 
@@ -25,6 +27,10 @@
 
                 font-size: 1.5rem;
             }
+        }
+
+        &__content {
+            padding: 2rem 0;
         }
     }
 </style>
