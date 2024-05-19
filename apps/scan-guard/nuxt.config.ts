@@ -1,6 +1,11 @@
 export default defineNuxtConfig({
-    ssr: false,
     modules: ['@pinia/nuxt', 'nuxt-svgo'],
+    ssr: false,
+    runtimeConfig: {
+        public: {
+            API_ENDPOINT: process.env.API_ENDPOINT,
+        },
+    },
     app: {
         head: {
             viewport: 'width=device-width, initial-scale=1',

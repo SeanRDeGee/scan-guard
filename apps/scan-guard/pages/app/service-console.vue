@@ -1,9 +1,3 @@
-<script lang="ts" setup>
-    const requestsStore = useRequestsStore()
-
-    await requestsStore.makeIsNmapInstalledRequest()
-</script>
-
 <template>
     <div class="service-console">
         <header class="service-console__header">

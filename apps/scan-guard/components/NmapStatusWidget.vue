@@ -1,20 +1,36 @@
 <script lang="ts" setup>
-    const requestsStore = useRequestsStore()
+    import type { ResponseNmapVersion } from '@scan-guard/api/interfaces'
+    const scanGuardAPI = useScanGuardAPI()
 
-    await requestsStore.makeIsNmapInstalledRequest()
+    const nmapVersion = ref<string | null>(null)
+    const nmapInstalled = computed(() => nmapVersion.value !== null)
+
+    try {
+        const response = await scanGuardAPI.get<ResponseNmapVersion>('nmap/version')
+
+        if (response.data.status === 200 && response.data.data) {
+            nmapVersion.value = response.data.data
+        }
+    } catch (error) {}
 </script>
 
 <template>
     <div class="nmap-status-widget">
-        <div><h2>Nmap Service Status</h2></div>
+        <div class="nmap-status-widget__label">
+            <svg-eye />
+            <h2>Nmap Service Status</h2>
+        </div>
         <div
             :class="[
                 'nmap-status-widget__indicator',
-                { 'nmap-status-widget__indicator--online': requestsStore.isNmapInstalled },
-                { 'nmap-status-widget__indicator--offline': !requestsStore.isNmapInstalled },
+                { 'nmap-status-widget__indicator--online': nmapInstalled },
+                { 'nmap-status-widget__indicator--offline': !nmapInstalled },
             ]"
         >
-            <span>{{ requestsStore.isNmapInstalled ? 'Online' : 'Offline' }}</span>
+            <span>{{ nmapInstalled ? 'Online' : 'Offline' }}</span>
+        </div>
+        <div v-if="nmapVersion" class="nmap-status-widget__version">
+            <span>{{ nmapVersion }}</span>
         </div>
     </div>
 </template>
@@ -24,12 +40,20 @@
         padding: 0.8rem 1.25rem;
 
         align-items: center;
+        column-gap: 1rem;
         display: grid;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr auto auto;
 
         background-color: var(--clr-background-secondary);
         border-radius: 0.5rem;
         color: var(--clr-text-secondary);
+
+        .nmap-status-widget__label {
+            align-items: center;
+            column-gap: 0.5rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+        }
 
         &__indicator {
             padding: 0.5rem 1rem;
@@ -47,6 +71,13 @@
                 background-color: var(--clr-status-red-background-00);
                 color: var(--clr-status-red-type-00);
             }
+        }
+
+        &__version {
+            padding: 0.5rem 1rem;
+
+            background-color: var(--clr-background-tertiary);
+            border-radius: 0.25rem;
         }
     }
 </style>

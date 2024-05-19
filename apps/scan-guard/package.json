@@ -8,7 +8,9 @@
     "deploy": "bun .output/server/index.mjs"
   },
   "dependencies": {
+    "@scan-guard/api": "workspace:*",
     "@pinia/nuxt": "^0.5.1",
+    "axios": "^1.6.8",
     "nuxt": "^3.11.2",
     "pinia": "^2.1.7",
     "socket.io-client": "^4.7.5",
