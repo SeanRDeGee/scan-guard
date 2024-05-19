@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export default function () {
+export default function useScanGuardAPI() {
     const runtimeConfig = useRuntimeConfig()
 
     const scanGuardAPI = axios.create({
