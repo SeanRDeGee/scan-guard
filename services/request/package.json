@@ -4,6 +4,9 @@
     "description": "Sintrex ScanGuard Request Service",
     "module": "index.ts",
     "type": "module",
+    "exports": {
+        "./interfaces": "./interfaces/index.ts"
+    },
     "scripts": {
         "dev": "bun index.ts",
         "deploy": "bun index.ts"

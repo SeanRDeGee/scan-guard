@@ -1,27 +1,27 @@
 {
-  "name": "@scan-guard/api",
-  "version": "0.1.0",
-  "description": "Sintrex ScanGuard API",
-  "module": "index.ts",
-  "type": "module",
-  "exports": {
-    "./interfaces": "./interfaces/index.ts"
-  },
-  "scripts": {
-    "dev": "bun index.ts",
-    "deploy": "bun index.ts"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@types/cors": "^2.8.17",
-    "@types/express": "^4.17.21"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "@scan-guard/nmap-service": "workspace:*",
-    "cors": "^2.8.5",
-    "express": "^4.19.2"
-  }
+    "name": "@scan-guard/api",
+    "version": "0.1.0",
+    "description": "Sintrex ScanGuard API",
+    "module": "index.ts",
+    "type": "module",
+    "exports": {
+        "./interfaces": "./interfaces/index.ts"
+    },
+    "scripts": {
+        "dev": "bun index.ts",
+        "deploy": "bun index.ts"
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "@types/cors": "^2.8.17",
+        "@types/express": "^4.17.21"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "@scan-guard/nmap-service": "workspace:*",
+        "cors": "^2.8.5",
+        "express": "^4.19.2"
+    }
 }
