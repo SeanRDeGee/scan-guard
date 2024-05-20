@@ -10,7 +10,8 @@
   "workspaces": [
     "apps/*",
     "services/*",
-    "modules/*"
+    "modules/*",
+    "containers/*"
   ],
   "devDependencies": {
     "@types/uuid": "^9.0.8"

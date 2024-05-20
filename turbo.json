@@ -1,9 +1,15 @@
 {
     "$schema": "https://turbo.build/schema.json",
     "pipeline": {
+        "mongodb:up": {
+            "cache": false
+        },
         "dev": {
             "cache": false,
-            "persistent": true
+            "persistent": true,
+            "dependsOn": [
+                "mongodb:up"
+            ]
         },
         "build": {
             "outputs": [
@@ -12,8 +18,12 @@
         },
         "deploy": {
             "dependsOn": [
-                "build"
+                "build",
+                "mongodb:up"
             ]
+        },
+        "mongodb:down": {
+            "cache": false
         }
     }
 }

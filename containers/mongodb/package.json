@@ -1,0 +1,8 @@
+{
+    "name": "@gotcha/mongodb",
+    "type": "module",
+    "scripts": {
+        "mongodb:up": "docker-compose -p scan-guard up -d",
+        "mongodb:down": "docker-compose -p scan-guard down"
+    }
+}
