@@ -1,0 +1,1 @@
+# Sintrex ScanGuard Database Module

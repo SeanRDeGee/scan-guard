@@ -1,0 +1,17 @@
+{
+  "name": "@scan-guard/database",
+  "version": "0.1.0",
+  "description": "Sintrex ScanGuard Database Module",
+  "module": "index.ts",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./interfaces": "./interfaces/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
