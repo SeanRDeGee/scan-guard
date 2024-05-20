@@ -16,7 +16,7 @@
             <h2>Single IP Scan</h2>
         </header>
         <form class="single-ip-requests-widget__form">
-            <FieldText v-model="ip" :autofocus="true" />
+            <FieldText v-model:value="ip" :autofocus="true" />
             <FieldButton @click.prevent="requestsStore.createSingleIPRequest(ip)">Scan</FieldButton>
         </form>
         <div class="single-ip-requests-widget__requests" v-if="requestsStore.singleIPRequests.length > 0">
