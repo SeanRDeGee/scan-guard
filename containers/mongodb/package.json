@@ -1,5 +1,5 @@
 {
-    "name": "@gotcha/mongodb",
+    "name": "@scan-guard/mongodb",
     "type": "module",
     "scripts": {
         "mongodb:up": "docker-compose -p scan-guard up -d",
