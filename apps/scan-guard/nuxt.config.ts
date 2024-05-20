@@ -3,6 +3,7 @@ export default defineNuxtConfig({
     ssr: false,
     runtimeConfig: {
         public: {
+            API_SERVER: process.env.API_SERVER,
             API_ENDPOINT: process.env.API_ENDPOINT,
         },
     },

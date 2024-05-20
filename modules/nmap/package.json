@@ -1,7 +1,7 @@
 {
-    "name": "@scan-guard/nmap-service",
+    "name": "@scan-guard/nmap",
     "version": "0.1.0",
-    "description": "Sintrex ScanGuard Nmap Service",
+    "description": "Sintrex ScanGuard Nmap Module",
     "module": "index.ts",
     "type": "module",
     "exports": {

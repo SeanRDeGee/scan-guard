@@ -1,11 +1,13 @@
+<script lang="ts" setup>
+    const requestStore = useRequestStore()
+</script>
+
 <template>
     <div class="app-home">
         <header class="app-home__header">
             <h1 class="app-home__header__title">ScanGuard Tools</h1>
         </header>
-        <div class="app-home__content">
-            <SingleIPRequestsWidget />
-        </div>
+        <div class="app-home__content"></div>
     </div>
 </template>
 
@@ -22,8 +24,8 @@
             &__title {
                 padding-bottom: 1rem;
 
-                border-bottom: 1px solid var(--clr-border-primary);
-                color: var(--clr-text-secondary);
+                border-bottom: 1px solid var(--clr-border-00);
+                color: var(--clr-text-00);
 
                 font-size: 1.5rem;
             }

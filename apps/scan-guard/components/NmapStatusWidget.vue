@@ -44,9 +44,9 @@
         display: grid;
         grid-template-columns: 1fr auto auto;
 
-        background-color: var(--clr-background-secondary);
+        background-color: var(--clr-background-01);
         border-radius: 0.5rem;
-        color: var(--clr-text-secondary);
+        color: var(--clr-text-00);
 
         .nmap-status-widget__label {
             align-items: center;
@@ -76,7 +76,7 @@
         &__version {
             padding: 0.5rem 1rem;
 
-            background-color: var(--clr-background-tertiary);
+            background-color: var(--clr-background-02);
             border-radius: 0.25rem;
         }
     }

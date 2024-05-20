@@ -1,14 +1,5 @@
 import execute from './util/execute'
 
-const isInstalled = async function (): Promise<boolean> {
-    try {
-        await execute('nmap --version')
-        return true
-    } catch {
-        return false
-    }
-}
-
 // Return the version of Nmap installed on the system
 const version = async function (): Promise<string> {
     try {
@@ -16,6 +7,7 @@ const version = async function (): Promise<string> {
 
         // Extract version number from console output
         const match = consoleOutput.match(/Nmap version (\d+\.\d+)/)
+
         if (match) {
             return match[1]
         } else {
@@ -35,7 +27,6 @@ const scanSingleIP = async function (ip: string): Promise<string> {
 }
 
 export default {
-    isInstalled,
     version,
     scanSingleIP,
 }

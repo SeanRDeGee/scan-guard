@@ -1,4 +1,4 @@
-import nmap from '@scan-guard/nmap-service'
+import nmap from '@scan-guard/nmap'
 
 import type { Request, Response } from 'express'
 import type { APIResponseNoData, ResponseNmapVersion } from '@interfaces/index'

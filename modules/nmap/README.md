@@ -1,4 +1,4 @@
-# @scan-guard/nmap-service
+# @scan-guard/nmap
 
 To install dependencies:
 

@@ -16,12 +16,13 @@
         "@types/cors": "^2.8.17",
         "@types/express": "^4.17.21"
     },
+    "dependencies": {
+        "@scan-guard/nmap": "workspace:*",
+        "cors": "^2.8.5",
+        "express": "^4.19.2",
+        "socket.io": "^4.7.5"
+    },
     "peerDependencies": {
         "typescript": "^5.0.0"
-    },
-    "dependencies": {
-        "@scan-guard/nmap-service": "workspace:*",
-        "cors": "^2.8.5",
-        "express": "^4.19.2"
     }
 }

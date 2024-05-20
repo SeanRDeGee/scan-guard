@@ -36,12 +36,14 @@
         gap: 0.75rem;
 
         &__label {
-            color: var(--clr-type-00);
-            font-size: var(--type-size-01);
+            color: var(--clr-text-00);
+
+            font-size: 1rem;
         }
 
         &__asterisk {
             margin-left: 0.25rem;
+
             color: var(--clr-asterisk-00);
         }
 
@@ -64,7 +66,7 @@
 
             background: none;
             border: none;
-            color: var(--clr-text-primary);
+            color: var(--clr-text-01);
 
             font-family: 'Teachers';
             font-size: 1rem;

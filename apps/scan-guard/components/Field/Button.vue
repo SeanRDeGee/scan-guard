@@ -72,11 +72,11 @@
         &.field-button--solid {
             background-color: var(--clr-button-normal-background-00);
             border: 1px solid var(--clr-button-normal-border-00);
-            color: var(--clr-text-white);
+            color: var(--clr-text-02);
 
             :deep(p),
             :deep(span) {
-                color: var(--clr-text-primary);
+                color: var(--clr-text-01);
             }
 
             &:hover {

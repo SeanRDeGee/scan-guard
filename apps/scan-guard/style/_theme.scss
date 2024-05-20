@@ -1,17 +1,16 @@
 :root {
     // General background colors
-    --clr-background-primary: hsl(204, 12%, 5%);
-    --clr-background-secondary: hsl(210, 8%, 7%);
-    --clr-background-tertiary: hsl(210, 8%, 12%);
+    --clr-background-00: hsl(204, 12%, 5%);
+    --clr-background-01: hsl(210, 8%, 7%);
+    --clr-background-02: hsl(210, 8%, 12%);
 
     // General border colors
-    --clr-border-primary: hsl(240, 1%, 15%);
+    --clr-border-00: hsl(240, 1%, 15%);
 
     // General text colors
-    --clr-text-white: hsl(0, 0%, 100%);
-    --clr-text-primary: hsl(180, 10%, 80%);
-    --clr-text-secondary: hsl(180, 5%, 65%);
-    --clr-text-tertiary: hsl(180, 5%, 45%);
+    --clr-text-00: hsl(180, 5%, 65%);
+    --clr-text-01: hsl(180, 10%, 80%);
+    --clr-text-02: hsl(0, 0%, 100%);
 
     // Menu item color
     --clr-menu-item-background: hsl(210, 8%, 11%);

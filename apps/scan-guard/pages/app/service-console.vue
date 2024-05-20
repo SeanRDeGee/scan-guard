@@ -21,8 +21,8 @@
             &__title {
                 padding-bottom: 1rem;
 
-                border-bottom: 1px solid var(--clr-border-primary);
-                color: var(--clr-text-secondary);
+                border-bottom: 1px solid var(--clr-border-00);
+                color: var(--clr-text-00);
 
                 font-size: 1.5rem;
             }

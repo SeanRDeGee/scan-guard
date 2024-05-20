@@ -40,8 +40,8 @@
         grid-template-rows: auto 1fr;
         row-gap: 1.5rem;
 
-        background-color: var(--clr-background-secondary);
-        border-right: 1px solid var(--clr-border-primary);
+        background-color: var(--clr-background-01);
+        border-right: 1px solid var(--clr-border-00);
 
         &__logo {
             height: auto;
@@ -64,7 +64,7 @@
                 grid-template-columns: auto 1fr;
 
                 border-radius: 0.25rem;
-                color: var(--clr-text-secondary);
+                color: var(--clr-text-00);
 
                 transition: background-color 0.2s;
 
@@ -74,7 +74,7 @@
 
                 &--selected {
                     background-color: var(--clr-menu-item-background);
-                    color: var(--clr-text-primary);
+                    color: var(--clr-text-01);
                 }
             }
         }
