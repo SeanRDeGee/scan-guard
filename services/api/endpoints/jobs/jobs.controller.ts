@@ -1,13 +1,35 @@
 import { v4 as uuid } from 'uuid'
 
-import jobs from '@scan-guard/database/jobs'
+import jobsDatabase from '@scan-guard/database/jobs'
 import nmap from '@scan-guard/nmap'
 
 import { io } from '@/server'
 
 import type { Request, Response } from 'express'
-import type { APIResponseNoData, ResponseCreateJob } from '@/interfaces'
+import type { APIResponseNoData, ResponseCreateJob, ResponseGetJobs } from '@/interfaces'
 import type { SingleHostPortScanJob, SingleHostPortScanJobPayload } from '@scan-guard/database/interfaces'
+
+export const jobs_get = async function (_req: Request, res: Response) {
+    try {
+        const jobs = await jobsDatabase.getAllJobs()
+
+        const response: ResponseGetJobs = {
+            status: 200,
+            error: null,
+            data: jobs,
+        }
+
+        res.json(response)
+    } catch (error) {
+        const response: APIResponseNoData = {
+            status: 500,
+            error: `Failed to get jobs: ${error}`,
+            data: null,
+        }
+
+        res.json(response)
+    }
+}
 
 export const jobs_post = async function (req: Request, res: Response) {
     try {
@@ -54,7 +76,7 @@ export const jobs_post = async function (req: Request, res: Response) {
             }
 
             // Save the job to the database
-            await jobs.createSingleHostPortScanJob(job)
+            await jobsDatabase.createSingleHostPortScanJob(job)
 
             // Run the job asynchronously
             nmap.scanSingleIP(jobPayload.ip)
@@ -67,7 +89,7 @@ export const jobs_post = async function (req: Request, res: Response) {
                     }
 
                     // Update the job in the database
-                    await jobs.updateSingleHostPortScanJob(updatedJob)
+                    await jobsDatabase.updateSingleHostPortScanJob(updatedJob)
 
                     // Emit an event to notify the client
                     io.sockets.emit('job-completed', { jobID })
@@ -82,7 +104,7 @@ export const jobs_post = async function (req: Request, res: Response) {
                     }
 
                     // Update the job in the database
-                    await jobs.updateSingleHostPortScanJob(updatedJob)
+                    await jobsDatabase.updateSingleHostPortScanJob(updatedJob)
 
                     // Emit an event to notify the client
                     io.sockets.emit('job-completed', { jobID })
