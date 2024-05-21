@@ -17,6 +17,7 @@
         "@types/express": "^4.17.21"
     },
     "dependencies": {
+        "@scan-guard/database": "workspace:*",
         "@scan-guard/nmap": "workspace:*",
         "cors": "^2.8.5",
         "express": "^4.19.2",

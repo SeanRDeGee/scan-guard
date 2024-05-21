@@ -6,6 +6,8 @@
   "type": "module",
   "exports": {
     ".": "./index.ts",
+    "./utils": "./controllers/utils.ts",
+    "./jobs": "./controllers/jobs.ts",
     "./interfaces": "./interfaces/index.ts"
   },
   "devDependencies": {
@@ -13,5 +15,8 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "mongodb": "^6.6.2"
   }
 }

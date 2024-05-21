@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-    const requestStore = useRequestStore()
+    const jobStore = useJobStore()
 </script>
 
 <template>
