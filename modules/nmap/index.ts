@@ -18,9 +18,36 @@ const version = async function (): Promise<string> {
     }
 }
 
-const scanSingleIP = async function (ip: string): Promise<string> {
+const scanSingleIP = async function (ip: string) {
     try {
-        return await execute(`nmap ${ip}`)
+        const consoleOutput = await execute(`nmap ${ip}`)
+
+        // Is host reachable?
+        const up = consoleOutput.includes('Host is up')
+
+        // Return if host is not reachable
+        if (!up) {
+            return {
+                reachable: false,
+                ports: [],
+            }
+        }
+
+        // Extract ports
+        const portMatches = consoleOutput.matchAll(/(\d+)\/(tcp|udp)\s+(\w+)\s+(\w+)/g)
+
+        const ports = []
+        for (const match of portMatches) {
+            const port = parseInt(match[1])
+            const state = match[3]
+            const service = match[4]
+            ports.push({ port, state, service })
+        }
+
+        return {
+            reachable: true,
+            ports,
+        }
     } catch (error) {
         throw new Error(`Failed to scan IP: ${error}`)
     }

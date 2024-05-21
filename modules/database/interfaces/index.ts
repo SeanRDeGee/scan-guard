@@ -9,11 +9,20 @@ export interface Job<P, D> {
     status: JobStatus
     payload: P
     data: D | null
+    error: unknown | null
 }
 
 export interface UnknownJob extends Job<unknown, unknown> {}
 
-export interface SingleHostPortScanJob
-    extends Job<{ ip: string }, { reachable: boolean; ports: { port: number; state: string; service: string }[] }> {
+export interface SingleHostPortScanJobPayload {
+    ip: string
+}
+
+export interface SingleHostPortScanJobData {
+    reachable: boolean
+    ports: { port: number; state: string; service: string }[]
+}
+
+export interface SingleHostPortScanJob extends Job<SingleHostPortScanJobPayload, SingleHostPortScanJobData> {
     type: 'single-host'
 }

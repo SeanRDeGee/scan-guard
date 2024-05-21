@@ -15,3 +15,7 @@ export type ResponseStatus = APIResponse<{ version: string }>
 // API Path: /api/nmap/version
 // -------------------------------------------------------------------------
 export type ResponseNmapVersion = APIResponse<string>
+
+// API Path: /api/jobs
+// -------------------------------------------------------------------------
+export type ResponseCreateJob = APIResponse<{ jobID: string }>
