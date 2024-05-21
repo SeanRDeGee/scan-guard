@@ -7,7 +7,10 @@
         <header class="app-home__header">
             <h1 class="app-home__header__title">ScanGuard Tools</h1>
         </header>
-        <div class="app-home__content"></div>
+        <div class="app-home__content">
+            <JobSingleHostScan />
+            <JobList />
+        </div>
     </div>
 </template>
 
@@ -33,6 +36,9 @@
 
         &__content {
             padding: 2rem 0;
+
+            display: grid;
+            row-gap: 2rem;
         }
     }
 </style>
